@@ -1,0 +1,15 @@
+const facts = [
+    "Butterflies taste with their feet.",
+    "Their wings are actually transparent; the colors come from tiny scales.",
+    "A group of butterflies is sometimes called a 'kaleidoscope'.",
+    "Most adult butterflies live for only a few weeks.",
+    "Monarch butterflies migrate up to 3,000 miles."
+];
+
+const button = document.getElementById('factButton');
+const display = document.getElementById('factDisplay');
+
+button.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    display.innerText = facts[randomIndex];
+});
