@@ -1,59 +1,17 @@
-/* General Styles */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-color: #fdfaf5;
-    color: #333;
-    text-align: center;
-}
+const facts = [
+    "Monarch butterflies migrate up to 3,000 miles to reach their winter home.",
+    "They are the only insects that migrate such a long distance annually.",
+    "Monarchs use a combination of the sun and a magnetic compass to navigate.",
+    "A group of butterflies is sometimes called a 'flutter' or a 'kaleidoscope'.",
+    "Caterpillars only eat milkweed leaves!"
+];
 
-header {
-    background-color: #ff8c00; /* Monarch Orange */
-    color: white;
-    padding: 2rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+const factBtn = document.getElementById('fact-btn');
+const factText = document.getElementById('fact-text');
 
-/* Image Styling */
-.image-container {
-    padding: 40px 20px;
-}
-
-#main-butterfly {
-    max-width: 80%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-#main-butterfly:hover {
-    transform: scale(1.02);
-}
-
-.caption {
-    font-style: italic;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* Interaction Section */
-.content {
-    padding: 2rem;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #ff8c00;
-}
+factBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    factText.textContent = facts[randomIndex];
+    factText.style.color = "#ff8c00";
+    factText.style.fontWeight = "bold";
+});
