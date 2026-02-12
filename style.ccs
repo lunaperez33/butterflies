@@ -1,0 +1,50 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f0fdf4; /* Very light green */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #10b981; /* Emerald green */
+    color: white;
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+main {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    background-color: #8b5cf6; /* Purple */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #7c3aed;
+}
+
+#factDisplay {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #059669;
+}
